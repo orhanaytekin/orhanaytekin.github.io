@@ -1,6 +1,6 @@
 {
   "extends": "next",
   "rules": {
-    // your custom rules here
+    "react/no-unescaped-entities": "off"
   }
 }
