@@ -63,38 +63,52 @@ const ContactSection = () => {
     <section className="grid-container fade-in">
       <TitleComponent text="Contact Me" />
       <form onSubmit={handleSubmit} className="grid-container">
-        <FormFieldComponent
-          label="Name"
-          id="name"
-          type="text"
-          value={formData.name}
-          onChange={handleChange}
-          error={errors.name}
-        />
-        <FormFieldComponent
-          label="Email"
-          id="email"
-          type="email"
-          value={formData.email}
-          onChange={handleChange}
-          error={errors.email}
-        />
-        <FormFieldComponent
-          label="Message"
-          id="message"
-          type="textarea"
-          value={formData.message}
-          onChange={handleChange}
-          error={errors.message}
-        />
-        <DraggableResizableComponent>
-          <button type="submit">Send Message</button>
-        </DraggableResizableComponent>
+        <div className="w-full max-w-4xl mx-auto space-y-6"> {/* Added space-y-6 for vertical spacing */}
+          <DraggableResizableComponent>
+            <FormFieldComponent
+              label="Name"
+              id="name"
+              type="text"
+              value={formData.name}
+              onChange={handleChange}
+              error={errors.name}
+              className="w-full"
+              textColor="white"
+            />
+          </DraggableResizableComponent>
+          <DraggableResizableComponent>
+            <FormFieldComponent
+              label="Email"
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              error={errors.email}
+              className="w-full"
+              textColor="white"
+            />
+          </DraggableResizableComponent>
+          <DraggableResizableComponent>
+            <FormFieldComponent
+              label="Message"
+              id="message"
+              type="textarea"
+              value={formData.message}
+              onChange={handleChange}
+              error={errors.message}
+              className="w-full"
+              textColor="white"
+            />
+          </DraggableResizableComponent>
+          <div className="flex justify-center pt-6"> {/* Added pt-6 for extra padding above the button */}
+            <DraggableResizableComponent>
+              <button type="submit" className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Send Message
+              </button>
+            </DraggableResizableComponent>
+          </div>
+        </div>
       </form>
-      <DraggableResizableComponent>
-        <h3 className="text-2xl mb-2">Connect with me</h3>
-      </DraggableResizableComponent>
-      <SocialLinksComponent />
     </section>
   );
 };

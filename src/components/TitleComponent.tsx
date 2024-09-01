@@ -2,10 +2,10 @@
 
 import DraggableResizableComponent from './DraggableResizableComponent';
 
-const TitleComponent = ({ text }: { text: string }) => {
+const TitleComponent = ({ text, centered = false }: { text: string, centered?: boolean }) => {
   return (
     <DraggableResizableComponent>
-      <h2 className="text-3xl mb-4">{text}</h2>
+      <h2 className={`text-3xl mb-4 ${centered ? 'text-center' : ''}`}>{text}</h2>
     </DraggableResizableComponent>
   );
 };

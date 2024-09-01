@@ -23,7 +23,7 @@ const SocialLinkComponent = ({ platform, url }: { platform: keyof typeof icons |
     <DraggableResizableComponent>
       <a href={url} className="flex items-center space-x-2">
         {platform === 'bento' ? (
-          <span>Bento</span>
+          <span>🍱 Bento</span>
         ) : (
           <>
             <FontAwesomeIcon icon={IconComponent} size="sm" />
