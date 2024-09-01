@@ -48,7 +48,7 @@ const ContactSection = () => {
         {
           from_name: formData.name,
           from_email: formData.email,
-          message: formData.message
+          message: formData.email+"\n"+formData.message
         },
         process.env.NEXT_PUBLIC_EMAILJS_USER_ID!,
       ).then((result) => {
