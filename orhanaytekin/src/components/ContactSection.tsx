@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { SOCIALS } from '../constants/socials';
+import TitleComponent from './TitleComponent';
+import FormFieldComponent from './FormFieldComponent';
+import SocialLinksComponent from './SocialLinksComponent';
 import DraggableResizableComponent from './DraggableResizableComponent';
 
 const ContactSection = () => {
@@ -58,59 +60,39 @@ const ContactSection = () => {
   };
 
   return (
-    <DraggableResizableComponent>
-      <section className="fade-in">
-        <h2 className="text-3xl mb-4">Contact Me</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium">Name</label>
-            <input
-              type="text"
-              id="name"
-              value={formData.name}
-              onChange={handleChange}
-            />
-            {errors.name && <span className="text-red-500 text-sm">{errors.name}</span>}
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium">Email</label>
-            <input
-              type="email"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium">Message</label>
-            <textarea
-              id="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={4}
-            ></textarea>
-            {errors.message && <span className="text-red-500 text-sm">{errors.message}</span>}
-          </div>
+    <section className="fade-in">
+      <TitleComponent text="Contact Me" />
+      <form onSubmit={handleSubmit}>
+        <FormFieldComponent
+          label="Name"
+          id="name"
+          type="text"
+          value={formData.name}
+          onChange={handleChange}
+          error={errors.name}
+        />
+        <FormFieldComponent
+          label="Email"
+          id="email"
+          type="email"
+          value={formData.email}
+          onChange={handleChange}
+          error={errors.email}
+        />
+        <FormFieldComponent
+          label="Message"
+          id="message"
+          type="textarea"
+          value={formData.message}
+          onChange={handleChange}
+          error={errors.message}
+        />
+        <DraggableResizableComponent>
           <button type="submit">Send Message</button>
-        </form>
-        <div className="mt-8">
-          <h3 className="text-2xl mb-2">Connect with me</h3>
-          <div className="flex">
-            <a href={SOCIALS.linkedin}>LinkedIn</a>
-            <a href={SOCIALS.github}>GitHub</a>
-            <a href={SOCIALS.bento}>Bento</a>
-            <a href={SOCIALS.medium}>Medium</a>
-            <a href={SOCIALS.twitter}>Twitter</a>
-            <a href={SOCIALS.goodreads}>Goodreads</a>
-            <a href={SOCIALS.letterboxd}>Letterboxd</a>
-            <a href={SOCIALS.spotify}>Spotify</a>
-            <a href={SOCIALS.whatsapp}>WhatsApp</a>
-            <a href={SOCIALS.gmail}>Gmail</a>
-          </div>
-        </div>
-      </section>
-    </DraggableResizableComponent>
+        </DraggableResizableComponent>
+      </form>
+      <SocialLinksComponent />
+    </section>
   );
 };
 

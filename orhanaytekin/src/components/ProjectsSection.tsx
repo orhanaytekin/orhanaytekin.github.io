@@ -1,3 +1,7 @@
+"use client";
+
+import DraggableResizableComponent from './DraggableResizableComponent';
+
 const projects = [
   {
     title: 'Lesion Meter',
@@ -22,15 +26,19 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section className="fade-in">
-      <h2 className="text-3xl mb-4">Projects</h2>
+      <DraggableResizableComponent>
+        <h2 className="text-3xl mb-4">Projects</h2>
+      </DraggableResizableComponent>
       <div className="grid">
         {projects.map((project, index) => (
-          <div key={index} className="card">
-            <h3 className="text-2xl mb-2">{project.title}</h3>
-            <p className="mb-2">{project.description}</p>
-            <p className="text-sm text-gray-400 mb-2">{project.tech}</p>
-            <a href={project.link} className="text-blue-500 hover:underline">View on GitHub</a>
-          </div>
+          <DraggableResizableComponent key={index}>
+            <div className="card">
+              <h3 className="text-2xl mb-2">{project.title}</h3>
+              <p className="mb-2">{project.description}</p>
+              <p className="text-sm text-gray-400 mb-2">{project.tech}</p>
+              <a href={project.link} className="text-blue-500 hover:underline">View on GitHub</a>
+            </div>
+          </DraggableResizableComponent>
         ))}
       </div>
     </section>
