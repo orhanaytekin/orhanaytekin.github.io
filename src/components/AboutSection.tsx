@@ -68,8 +68,8 @@ const AboutSection = () => {
           <TimelineContent>
             <h4 className="text-xl font-bold">Certifications</h4>
             <p className="text-sm text-gray-400">December 2022</p>
-            <p className="text-sm text-gray-400">Google Cloud Fundamentals: Core Infrastructure</p>
-            <p className="text-sm text-gray-400">Google Cloud Big Data and Machine Learning Fundamentals</p>
+            <p >Google Cloud Fundamentals: Core Infrastructure</p>
+            <p >Google Cloud Big Data and Machine Learning Fundamentals</p>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
