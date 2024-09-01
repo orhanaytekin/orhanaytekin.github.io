@@ -66,9 +66,10 @@ const AboutSection = () => {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <h4 className="text-xl font-bold">Computer Science Intern at Ankara Su ve Kanalizasyon İdaresi</h4>
-            <p className="text-sm text-gray-400">August 2022 - September 2022</p>
-            <p>Completed reviews of codes, requirements and project plans. Developed mobile applications using Flutter and Dart as a side project.</p>
+            <h4 className="text-xl font-bold">Certifications</h4>
+            <p className="text-sm text-gray-400">December 2022</p>
+            <p className="text-sm text-gray-400">Google Cloud Fundamentals: Core Infrastructure</p>
+            <p className="text-sm text-gray-400">Google Cloud Big Data and Machine Learning Fundamentals</p>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -77,9 +78,9 @@ const AboutSection = () => {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <h4 className="text-xl font-bold">Certifications</h4>
-            <p className="text-sm text-gray-400">Google Cloud Fundamentals: Core Infrastructure</p>
-            <p className="text-sm text-gray-400">Google Cloud Big Data and Machine Learning Fundamentals</p>
+            <h4 className="text-xl font-bold">Computer Science Intern at Ankara Su ve Kanalizasyon İdaresi</h4>
+            <p className="text-sm text-gray-400">August 2022 - September 2022</p>
+            <p>Completed reviews of codes, requirements and project plans. Developed mobile applications using Flutter and Dart as a side project.</p>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
