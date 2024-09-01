@@ -4,7 +4,6 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import TitleComponent from './TitleComponent';
 import FormFieldComponent from './FormFieldComponent';
-import SocialLinksComponent from './SocialLinksComponent';
 import DraggableResizableComponent from './DraggableResizableComponent';
 
 const ContactSection = () => {
@@ -46,8 +45,12 @@ const ContactSection = () => {
       emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        formData,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!,
       ).then((result) => {
         console.log(result.text);
         alert('Message sent successfully!');
