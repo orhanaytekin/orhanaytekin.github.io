@@ -60,9 +60,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="fade-in">
+    <section className="grid-container fade-in">
       <TitleComponent text="Contact Me" />
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="grid-container">
         <FormFieldComponent
           label="Name"
           id="name"
@@ -91,6 +91,9 @@ const ContactSection = () => {
           <button type="submit">Send Message</button>
         </DraggableResizableComponent>
       </form>
+      <DraggableResizableComponent>
+        <h3 className="text-2xl mb-2">Connect with me</h3>
+      </DraggableResizableComponent>
       <SocialLinksComponent />
     </section>
   );

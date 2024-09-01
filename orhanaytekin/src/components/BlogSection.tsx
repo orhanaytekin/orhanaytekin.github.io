@@ -25,22 +25,20 @@ const blogs = [
 
 const BlogSection = () => {
   return (
-    <section className="fade-in">
+    <section className="grid-container fade-in">
       <DraggableResizableComponent>
         <h2 className="text-3xl mb-4">Blog</h2>
       </DraggableResizableComponent>
-      <div className="grid">
-        {blogs.map((blog, index) => (
-          <DraggableResizableComponent key={index}>
-            <div className="card">
-              <h3 className="text-2xl mb-2">{blog.title}</h3>
-              <p className="text-sm text-gray-400 mb-2">{blog.date}</p>
-              <p className="mb-2">{blog.description}</p>
-              <a href={blog.link} className="text-blue-500 hover:underline">Read More</a>
-            </div>
-          </DraggableResizableComponent>
-        ))}
-      </div>
+      {blogs.map((blog, index) => (
+        <DraggableResizableComponent key={index}>
+          <div className="card">
+            <h3 className="text-2xl mb-2">{blog.title}</h3>
+            <p className="text-sm text-gray-400 mb-2">{blog.date}</p>
+            <p className="mb-2">{blog.description}</p>
+            <a href={blog.link} className="text-blue-500 hover:underline">Read More</a>
+          </div>
+        </DraggableResizableComponent>
+      ))}
     </section>
   );
 };

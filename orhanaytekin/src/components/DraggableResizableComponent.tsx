@@ -12,7 +12,7 @@ const DraggableResizableComponent = ({ children }: { children: React.ReactNode }
   useEffect(() => {
     if (ref.current) {
       const { offsetWidth, offsetHeight } = ref.current;
-      setSize({ width: offsetWidth, height: offsetHeight });
+      setSize({ width: offsetWidth + 30, height: offsetHeight + 30 }); // Add padding to the size
     }
   }, [children]);
 
@@ -21,11 +21,11 @@ const DraggableResizableComponent = ({ children }: { children: React.ReactNode }
       <ResizableBox
         width={size.width}
         height={size.height}
-        minConstraints={[50, 50]}
-        maxConstraints={[600, 600]}
+        minConstraints={[70, 70]} // Adjusted for padding
+        maxConstraints={[1200, 1200]} // Adjusted for padding
         className="draggable-resizable"
       >
-        <div ref={ref} className="card">
+        <div ref={ref} className="card" style={{ padding: '10px' }}> {/* Add padding here */}
           {children}
         </div>
       </ResizableBox>

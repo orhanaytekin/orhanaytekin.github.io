@@ -31,7 +31,6 @@ export const GlobalStyle = createGlobalStyle`
 
   .draggable-resizable {
     border: 2px dashed ${({ theme }) => theme.colors.accent};
-    padding: 16px;
     margin: 16px;
     display: flex;
     justify-content: center;
@@ -57,9 +56,34 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     margin: 0 8px;
     transition: color 0.3s ease;
+    animation: pulse 2s infinite;
   }
 
   .navbar a:hover {
     color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .timeline-item {
+    margin-bottom: 16px;
   }
 `;
