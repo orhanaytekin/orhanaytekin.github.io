@@ -73,7 +73,6 @@ const ContactSection = () => {
               onChange={handleChange}
               error={errors.name}
               className="w-full"
-              textColor="white"
             />
           </DraggableResizableComponent>
           <DraggableResizableComponent>
@@ -85,7 +84,6 @@ const ContactSection = () => {
               onChange={handleChange}
               error={errors.email}
               className="w-full"
-              textColor="white"
             />
           </DraggableResizableComponent>
           <DraggableResizableComponent>
@@ -97,7 +95,6 @@ const ContactSection = () => {
               onChange={handleChange}
               error={errors.message}
               className="w-full"
-              textColor="white"
             />
           </DraggableResizableComponent>
           <div className="flex justify-center pt-6"> {/* Added pt-6 for extra padding above the button */}

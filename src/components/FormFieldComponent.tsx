@@ -10,13 +10,14 @@ interface FormFieldProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   error: string;
   className?: string;
-  textColor?: string;
+  labelColour?: string;
+  inputColour?: string;
 }
 
-const FormFieldComponent: React.FC<FormFieldProps> = ({ label, id, type, value, onChange, error, className, textColor = 'black' }) => {
+const FormFieldComponent: React.FC<FormFieldProps> = ({ label, id, type, value, onChange, error, className, labelColour = 'white', inputColour = 'black' }) => {
   const inputClasses = `w-full p-2 border rounded-md ${error ? 'border-red-500' : 'border-gray-300'} ${className || ''}`;
-  const labelClasses = `block mb-2 font-bold ${textColor === 'white' ? 'text-white' : 'text-gray-700'}`;
-  const inputStyles = { color: textColor };
+  const labelClasses = `block mb-2 font-bold ${labelColour === 'white' ? 'text-white' : 'text-gray-700'}`;
+  const inputStyles = { color: inputColour };
 
   return (
     <div className="mb-4">
