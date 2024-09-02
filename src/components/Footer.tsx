@@ -21,12 +21,14 @@ const Footer = () => {
             <h3 className="text-2xl text-center">Connect with me</h3>
           </DraggableResizableComponent>
           
-          <button
-            onClick={resetPositions}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded bg-clip-padding mr-4"
-          >
-            ↻ Reset
-          </button>
+          <div className="hidden md:block"> {/* Hide the button on screens smaller than 768px */}
+            <button
+              onClick={resetPositions}
+              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded bg-clip-padding mr-4"
+            >
+              ↻ Reset
+            </button>
+          </div>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {Object.entries(SOCIALS).map(([platform, url]) => (

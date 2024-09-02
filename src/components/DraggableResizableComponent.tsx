@@ -1,12 +1,26 @@
 "use client";
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Draggable from 'react-draggable';
 
 const DraggableResizableComponent = ({ children }: { children: React.ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [isDraggable, setIsDraggable] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDraggable(window.innerWidth >= 768);
+    };
+
+    handleResize(); // Set initial state
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const showBoundingBox = isHovering || isDragging;
 
@@ -33,6 +47,7 @@ const DraggableResizableComponent = ({ children }: { children: React.ReactNode }
           ref.current.style.pointerEvents = 'none';
         }
       }}
+      disabled={!isDraggable}
     >
       <div 
         ref={ref} 
