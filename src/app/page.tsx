@@ -11,7 +11,7 @@ export default function Home() {
         <DraggableResizableComponent>
           <div className="flex flex-col items-center space-y-2">
             <a
-              href="/orhanaytekin.github.io/cv.pdf"
+              href="/cv.pdf"
               download="Orhan Aytekin CV"
               className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
             >
