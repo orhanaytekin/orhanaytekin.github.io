@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Draggable from 'react-draggable';
+import { UI_CONSTANTS } from '../constants/uiConstants';
 
 const DraggableResizableComponent = ({ children }: { children: React.ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -62,7 +63,7 @@ const DraggableResizableComponent = ({ children }: { children: React.ReactNode }
           cursor: isDragging ? 'grabbing' : 'grab',
           transition: 'border 0.3s, box-shadow 0.3s',
           backgroundColor: 'rgba(40, 42, 54, 0.8)',
-          zIndex: 250,
+          zIndex: UI_CONSTANTS.DRAGGABLE_Z_INDEX,
         }}
       >
         {children}

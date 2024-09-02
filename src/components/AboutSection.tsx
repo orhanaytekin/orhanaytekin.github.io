@@ -3,6 +3,7 @@
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
 import DraggableResizableComponent from './DraggableResizableComponent';
 import TitleComponent from './TitleComponent';
+import { UI_CONSTANTS } from '@/constants/uiConstants';
 
 const AboutSection = () => {
   return (
@@ -23,10 +24,10 @@ const AboutSection = () => {
           </p>
         </div>
       </DraggableResizableComponent>
-      <section id="career-timeline">
-        <TitleComponent text="Career Timeline" centered={true}/>
-        <Timeline position="alternate">
-          <TimelineItem>
+      <TitleComponent text="Career Timeline" centered={true}/>
+      <section id="career-timeline">      
+          <Timeline position="alternate">
+            <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="primary" />
               <TimelineConnector />
