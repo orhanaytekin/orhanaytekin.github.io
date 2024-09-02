@@ -1,27 +1,45 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navRef}>
       <div className="logo">
-        <Link href="/" className="logo-text">Orhan Aytekin</Link>
+        <Link href="/" onClick={toggleMenu} className="logo-text">Orhan Aytekin</Link>
         <span className="icon" onClick={toggleMenu}>{isOpen ? '▲' : '▼'}</span>
       </div>
       <div className={`links ${isOpen ? 'open' : ''}`}>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/" onClick={closeMenu}>Home</Link>
+        <Link href="/about" onClick={closeMenu}>About</Link>
+        <Link href="/projects" onClick={closeMenu}>Projects</Link>
+        <Link href="/blog" onClick={closeMenu}>Blog</Link>
+        <Link href="/contact" onClick={closeMenu}>Contact</Link>
       </div>
       <style jsx>{`
         .navbar {
