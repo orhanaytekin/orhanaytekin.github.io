@@ -31,7 +31,15 @@ const NavBar = () => {
   return (
     <nav className="navbar" ref={navRef}>
       <div className="logo">
-        <Link href="/" onClick={toggleMenu} className="logo-text">Orhan Aytekin</Link>
+        {typeof window !== 'undefined' && window.innerWidth > 768 ? (
+          <Link href="/" onClick={toggleMenu} className="logo-text">
+            Orhan Aytekin
+          </Link>
+        ) : (
+          <span className="logo-text" onClick={toggleMenu}>
+            Orhan Aytekin
+          </span>
+        )}
         <span className="icon" onClick={toggleMenu}>{isOpen ? '▲' : '▼'}</span>
       </div>
       <div className={`links ${isOpen ? 'open' : ''}`}>
@@ -86,9 +94,10 @@ const NavBar = () => {
             flex-direction: column;
             align-items: center; /* Center the links */
             gap: 0;
+            border-top: 1px solid #ddd; /* Add top border for the dropdown */
           }
           .links a {
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem; /* Increased vertical padding for better touch targets */
             border-bottom: 1px solid #ddd; /* Line separators between items */
             width: 100%;
             text-align: center; /* Center the text */
