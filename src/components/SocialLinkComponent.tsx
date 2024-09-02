@@ -19,9 +19,11 @@ const icons = {
 
 const SocialLinkComponent = ({ platform, url }: { platform: keyof typeof icons | 'bento', url: string }) => {
   const IconComponent = icons[platform as keyof typeof icons];
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches; // Check if screen width is at least 768px
+
   return (
     <DraggableResizableComponent>
-      <a href={url} className="flex items-center space-x-2">
+      <a href={url} className="flex items-center space-x-2" target={isDesktop ? "_blank" : "_self"}>
         {platform === 'bento' ? (
           <span>🍱 Bento</span>
         ) : (
