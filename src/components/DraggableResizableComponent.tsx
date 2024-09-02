@@ -62,6 +62,7 @@ const DraggableResizableComponent = ({ children }: { children: React.ReactNode }
           cursor: isDragging ? 'grabbing' : 'grab',
           transition: 'border 0.3s, box-shadow 0.3s',
           backgroundColor: 'rgba(40, 42, 54, 0.8)',
+          zIndex: 250,
         }}
       >
         {children}

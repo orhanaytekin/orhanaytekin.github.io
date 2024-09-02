@@ -2,13 +2,11 @@ import HeroSection from '../components/HeroSection';
 import Link from 'next/link';
 import { SOCIALS } from '../constants/socials';
 import DraggableResizableComponent from '../components/DraggableResizableComponent';
-import FadingPopup from '../components/FadingPopup';
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <FadingPopup />
       <div className="flex flex-col items-center mt-8 space-y-4">
         <DraggableResizableComponent>
           <div className="flex flex-col items-center space-y-2">
