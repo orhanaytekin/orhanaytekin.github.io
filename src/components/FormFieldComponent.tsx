@@ -20,7 +20,7 @@ const FormFieldComponent: React.FC<FormFieldProps> = ({ label, id, type, value, 
   const inputStyles = { color: inputColour };
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 hover-grow">
       <label htmlFor={id} className={labelClasses}>
         {label}
       </label>
