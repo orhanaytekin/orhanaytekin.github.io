@@ -5,7 +5,7 @@ import DraggableResizableComponent from './DraggableResizableComponent';
 const TextComponent = ({ text }: { text: string }) => {
   return (
     <DraggableResizableComponent>
-      <p>{text}</p>
+      <p style={{ textAlign: 'center' }}>{text}</p>
     </DraggableResizableComponent>
   );
 };
