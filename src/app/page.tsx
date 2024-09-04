@@ -6,6 +6,12 @@ import DraggableResizableComponent from '../components/DraggableResizableCompone
 export default function Home() {
   return (
     <main>
+      <title>Orhan Aytekin</title>
+      <link rel="icon" href="/profile.jpg" />
+      <meta name="description" content="Personal website of Orhan Aytekin" />
+      <meta property="og:title" content="Orhan Aytekin" />
+      <meta property="og:description" content="Personal website of Orhan Aytekin" />
+      <meta property="og:image" content="/profile.jpg" />
       <HeroSection />
       <div className="flex flex-col items-center mt-8 space-y-4">
         <DraggableResizableComponent>
