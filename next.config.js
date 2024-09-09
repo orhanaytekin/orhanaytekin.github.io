@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/orhanaytekin.github.io",
+  basePath: "/",
   // other configurations...
 }
 
