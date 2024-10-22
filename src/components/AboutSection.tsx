@@ -12,7 +12,7 @@ const AboutSection = () => {
       <DraggableResizableComponent>
         <div className="mb-4">
           <p className="mb-2">
-            I'm <strong>Orhan Aytekin</strong>, a <strong>Junior Backend Developer</strong> at PlusMinusOne. With a <strong>Computer Engineering</strong> degree from Hacettepe University (GPA 3.3/4.0), I specialize in:
+            I'm <strong>Orhan Aytekin</strong>, a <strong>Backend Developer</strong> at PlusMinusOne. With a <strong>Computer Engineering</strong> degree from Hacettepe University (GPA 3.3/4.0), I specialize in:
           </p>
           <ul className="list-disc list-inside mt-2">
             <li><strong>Backend:</strong> AWS, Node.js, TypeScript, NestJS</li>
@@ -33,9 +33,9 @@ const AboutSection = () => {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
-              <h4 className="text-xl font-bold">Junior Backend Developer at PlusMinusOne</h4>
+              <h4 className="text-xl font-bold">Backend Developer at PlusMinusOne</h4>
               <p className="text-sm text-gray-400">August 2024 - Present</p>
-              <p>Currently working as a Junior Backend Developer at PlusMinusOne.</p>
+              <p>Currently working as a Backend Developer at PlusMinusOne.</p>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
@@ -55,7 +55,7 @@ const AboutSection = () => {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
-              <h4 className="text-xl font-bold">Junior Software Engineer at Neuronic</h4>
+              <h4 className="text-xl font-bold">Software Engineer at Neuronic</h4>
               <p className="text-sm text-gray-400">July 2023 - July 2024</p>
               <p>Developed and maintained backend services using AWS, NodeJS and TypeScript. Implemented CI/CD pipelines to automate testing, integration, and deployment processes, enhancing overall development efficiency.</p>
             </TimelineContent>

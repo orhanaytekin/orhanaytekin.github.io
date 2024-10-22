@@ -1,6 +1,6 @@
 const experiences = [
   {
-    role: 'Junior Backend Developer',
+    role: 'Backend Developer',
     company: 'PlusMinusOne',
     duration: 'August 2024 - Present',
     details: 'Developing backend services using Node.js and NestJS.',
@@ -12,7 +12,7 @@ const experiences = [
     details: 'Assisted in developing the backend using Node.js and NestJS. Contributed to the frontend development with React and Next.js.',
   },
   {
-    role: 'Junior Software Engineer',
+    role: 'Software Engineer',
     company: 'Neuronic',
     duration: 'July 2023 - July 2024',
     details: 'Developed and maintained backend services using AWS, NodeJS and TypeScript. Implemented CI/CD pipelines and enforced coding standards.',
