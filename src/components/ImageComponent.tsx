@@ -7,7 +7,7 @@ const ImageComponent = ({ alt, width, height }: { alt: string, width: number, he
   return (
     <DraggableResizableComponent>
       <Image
-        src={'/profile.jpg'}
+        src={'/profile.png'}
         alt='Orhan Aytekin'
         width={150}
         height={150}
